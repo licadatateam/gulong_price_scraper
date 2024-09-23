@@ -11,3 +11,4 @@ fuzzywuzzy
 typing_extensions==4.7.1
 gunicorn
 python-Levenshtein
+streamlit
