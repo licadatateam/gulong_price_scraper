@@ -2,7 +2,7 @@
 """
 Created on Mon Jul 10 12:42:34 2023
 
-@author: Arvin Jay
+@author: Arvin Jay, Carlo
 """
 
 from google.cloud import bigquery
@@ -11,8 +11,12 @@ from google.cloud.exceptions import NotFound
 import json
 
 def get_acct():
-    with open('secrets.json') as s:
-        acct = json.load(s)
+    try:
+        import streamlit as st
+        acct = st.secrets['secrets']
+    except:
+        with open('secrets.json') as s:
+            acct = json.load(s)
     return acct
 
 def authenticate_bq(acct): #acct - service acct details, json type
