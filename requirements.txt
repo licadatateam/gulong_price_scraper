@@ -1,0 +1,13 @@
+flask
+pandas
+google-auth
+google-cloud
+google-cloud-bigquery
+google-cloud-storage
+gspread
+datetime
+selenium==4.2.0
+fuzzywuzzy
+typing_extensions==4.7.1
+gunicorn
+python-Levenshtein
